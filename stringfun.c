@@ -58,6 +58,16 @@ int strcmp0( char *s1, char *s2 ) {
 	return 0;
 }
 
+char * strchar(char *s, char c){
+  while(*s){
+    if(*s == c){
+      return s;
+    }
+    s += 1;
+  }
+  return NULL;
+}
+
 int main(){
   char s1[20] = "hello";
   char s2[20] = "chair";
@@ -107,6 +117,27 @@ int main(){
   printf("Comparing \"\" and \"ab\", expecting negative \n");
   printf("[standard]: %d\n", strcmp("","a"));
   printf("[our result]: %d\n", strcmp0("","a"));
+
+  char s3[20] = "hell";
+  char s4[20] = "chair and Tables";
+  char s5[20] = "HEHEXDDDD";
+  char s6[20] = "dAnKmEmEs";
+  printf("---Testing strchr---\n"); 
+  printf("[s3]:%s\n", s3);
+  printf("[standard]: strchr(s3) is %lu\n",strchr(s3,e)); 
+  printf("[our result]: strchr(s3) is %d\n",strchar(s3,e));
+
+  printf("[s4]:%s\n", s4);
+  printf("[standard]: strchr(s4) is %lu\n",strchr(s4,T)); 
+  printf("[our result]: strchr(s4) is %d\n",strchar(s4,T));
+
+  printf("[s5]:%s\n", s5);
+  printf("[standard]: strchr(s5) is %lu\n",strchr(s5,H)); 
+  printf("[our result]: strchr(s5) is %d\n",strchar(s5,H));
+
+  printf("[s6]:%s\n", s6);
+  printf("[standard]: strchr(s6) is %lu\n",strchr(s6,e)); 
+  printf("[our result]: strchr(s6) is %d\n",strchar(s6,e)); 
 
   return 0;
 }
