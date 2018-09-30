@@ -124,20 +124,20 @@ int main(){
   char s6[20] = "dAnKmEmEs";
   printf("---Testing strchr---\n"); 
   printf("[s3]:%s\n", s3);
-  printf("[standard]: strchr(s3) is %lu\n",strchr(s3,e)); 
-  printf("[our result]: strchr(s3) is %d\n",strchar(s3,e));
+  printf("[standard]: strchr(s3) is %lu\n",strchr(s3,'e')); 
+  printf("[our result]: strchr(s3) is %d\n",strchar(s3,'e'));
 
   printf("[s4]:%s\n", s4);
-  printf("[standard]: strchr(s4) is %lu\n",strchr(s4,T)); 
-  printf("[our result]: strchr(s4) is %d\n",strchar(s4,T));
+  printf("[standard]: strchr(s4) is %lu\n",strchr(s4,'T')); 
+  printf("[our result]: strchr(s4) is %d\n",strchar(s4,'T'));
 
   printf("[s5]:%s\n", s5);
-  printf("[standard]: strchr(s5) is %lu\n",strchr(s5,H)); 
-  printf("[our result]: strchr(s5) is %d\n",strchar(s5,H));
+  printf("[standard]: strchr(s5) is %lu\n",strchr(s5,'H')); 
+  printf("[our result]: strchr(s5) is %d\n",strchar(s5,'H'));
 
   printf("[s6]:%s\n", s6);
-  printf("[standard]: strchr(s6) is %lu\n",strchr(s6,e)); 
-  printf("[our result]: strchr(s6) is %d\n",strchar(s6,e)); 
+  printf("[standard]: strchr(s6) is %lu\n",strchr(s6,'e')); 
+  printf("[our result]: strchr(s6) is %d\n",strchar(s6,'e')); 
 
   return 0;
 }
