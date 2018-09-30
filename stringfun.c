@@ -42,8 +42,8 @@ char * strncat0( char *dest, char *source, int n){
   return dest;
 }
 
-// Compares two strings: returns a -# if s1 < s2, +# if s1 > s2, 0 is equal
-int strcmp0( char *s1, char *s2 ) {
+// Compares two strings: returns a -# if s1 < s2, +# if s1 > s2, 0 is equali
+nt strcmp0( char *s1, char *s2 ) {
   // Will run when s1 AND s2 is not 0 OR s1 xor s2 is at the end (diff in length)  
 	while ((*s1 && *s2) || ((*s1 == 0) && !(*s2 == 0))){
     // Compares the char
@@ -118,26 +118,23 @@ int main(){
   printf("[standard]: %d\n", strcmp("","a"));
   printf("[our result]: %d\n", strcmp0("","a"));
 
-  char s3[20] = "hell";
-  char s4[20] = "chair and Tables";
-  char s5[20] = "HEHEXDDDD";
-  char s6[20] = "dAnKmEmEs";
+
   printf("---Testing strchr---\n"); 
-  printf("[s3]:%s\n", s3);
-  printf("[standard]: strchr(s3) is %lu\n",strchr(s3,'e')); 
-  printf("[our result]: strchr(s3) is %d\n",strchar(s3,'e'));
+  printf("[s3]:%s\n","hell" );
+  printf("[standard]: strchr(s3) is %lu\n",strchr("hell",'e')); 
+  printf("[our result]: strchr(s3) is %d\n",strchar("hell",'e'));
 
-  printf("[s4]:%s\n", s4);
-  printf("[standard]: strchr(s4) is %lu\n",strchr(s4,'T')); 
-  printf("[our result]: strchr(s4) is %d\n",strchar(s4,'T'));
+  printf("[s4]:%s\n","chair and Tables" );
+  printf("[standard]: strchr(s4) is %lu\n",strchr("chair and Tables",'T')); 
+  printf("[our result]: strchr(s4) is %d\n",strchar("chair and Tables",'T'));
 
-  printf("[s5]:%s\n", s5);
-  printf("[standard]: strchr(s5) is %lu\n",strchr(s5,'H')); 
-  printf("[our result]: strchr(s5) is %d\n",strchar(s5,'H'));
+  printf("[s5]:%s\n", "HEHEXDDDD");
+  printf("[standard]: strchr(s5) is %lu\n",strchr("HEHEXDDDD",'H')); 
+  printf("[our result]: strchr(s5) is %d\n",strchar("HEHEXDDDD",'H'));
 
-  printf("[s6]:%s\n", s6);
-  printf("[standard]: strchr(s6) is %lu\n",strchr(s6,'e')); 
-  printf("[our result]: strchr(s6) is %d\n",strchar(s6,'e')); 
+  printf("[s6]:%s\n","dAnKmEmEs" );
+  printf("[standard]: strchr(s6) is %lu\n",strchr("dAnKmEmEs",'e')); 
+  printf("[our result]: strchr(s6) is %d\n",strchar("dAnKmEmEs",'e')); 
 
   return 0;
 }
